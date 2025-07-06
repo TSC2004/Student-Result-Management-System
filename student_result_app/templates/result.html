@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h2>Student Result Summary</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Total Marks</th>
+            <th>Max Marks</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.student_id }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.total_obtained }}</td>
+            <td>{{ row.total_max }}</td>
+            <td>{{ row.percentage }}%</td>
+            <td>{{ row.grade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
